@@ -1,0 +1,431 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header{
+             background: linear-gradient(to right, #f59e0b, #f97316);
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            width: auto;
+            height: 60px;
+            /* border-radius: 50%;
+            border: 2px solid white; */
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #fef08a;
+        }
+
+        /* Hero Section */
+        .hero{
+            position: relative;
+            width: 100%;
+            height: 530px;
+            margin: 0 auto;
+            background-image: url(./molovesoro.jpg);
+            background-size: cover;
+            background-position: center;
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+        }
+        .hero-overlay h1 {
+            font-size: 2.2rem;
+            margin: 0;
+        }
+        .hero-overlay h3 {
+            font-size: 1.5rem;
+            margin-top: 4px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #f59e0b;
+            color: white;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        
+        /* .hero-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hero-img {
+              margin: 0 auto 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 100%;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+        } */
+        
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #d97706;
+            font-weight: bold;
+            padding: 12px 30px;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #fef3c7;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Places Section */
+        .places-section {
+            padding: 50px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #1e293b;
+        }
+        
+        .places-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .place-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .place-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .place-img-container {
+            position: relative;
+        }
+        
+        .place-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .distance-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #f59e0b;
+            color: white;
+            padding: 5px 12px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-bottom-left-radius: 8px;
+        }
+
+        .place-content {
+            padding: 20px;
+        }
+        
+        .place-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #1e293b;
+        }
+        
+        .place-description {
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+        
+        .distance-container {
+            margin-bottom: 15px;
+        }
+        
+        .distance-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #64748b;
+            margin-bottom: 5px;
+        }
+
+        .distance-meter {
+            height: 4px;
+            width: 100%;
+            background: linear-gradient(90deg, #f59e0b, #10b981);
+            border-radius: 2px;
+        }
+        
+        .view-button {
+            display: block;
+            width: 100%;
+            background-color: #f59e0b;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .view-button:hover {
+            background-color: #d97706;
+        }
+
+        /* Instagram Section */
+        .instagram-section {
+            background-color: #f1f5f9;
+            padding: 50px 0;
+        }
+        
+        .instagram-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #1e293b;
+        }
+        
+        .instagram-title span {
+            color: #d97706;
+        }
+        
+        .instagram-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .instagram-post img {
+            border-radius: 8px;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .instagram-post img:hover {
+            transform: scale(1.03);
+        }
+        
+        .instagram-button {
+            display: inline-block;
+            text-align: center;
+            background-color: white;
+            color: #d97706;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 30px;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+
+        .instagram-button:hover {
+            /* opacity: 0.9; */
+            transform: translateY(-3px);
+            background-color: #fef3c7;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+
+        .footer-logo-text {
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        
+        .footer-about {
+            margin-bottom: 15px;
+            color: #cbd5e1;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: #f59e0b;
+        }
+
+        .footer-copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .instagram-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .places-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .instagram-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero-title {
+                font-size: 1.8rem;
+            }
+        }
